@@ -1,0 +1,9 @@
+# ignore
+venv/
+__pycache__/
+.git/
+*.py[cod]
+*.so
+*.pyd
+.env
+.vscode/
