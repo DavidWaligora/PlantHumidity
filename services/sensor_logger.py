@@ -1,6 +1,7 @@
 import spidev
 import time
 from data.models import HumidityLog
+from data.models import Plant
 
 # SENSORS
 SENSOR_fiji_0 = 0 # fiji
@@ -48,6 +49,10 @@ def log_forever():
 		while True:
 			HumidityLog.delete_old_records()
 			for SENSOR in SENSORLIST:
+				if not Plant.exists(SENSOR):
+					print(f"Skipping sensor {SENSOR}: no plant with that ID.")
+					continue
+
 				raw = read_adc(SENSOR)
 				humidity = get_humidity_percent(raw)
 				HumidityLog.log(SENSOR, humidity)

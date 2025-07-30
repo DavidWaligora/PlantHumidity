@@ -67,3 +67,13 @@ class Plant:
 		except:
 			conn.close()
 			return None
+	
+	#check if plant exists
+	@staticmethod
+	def exists(plant_id):
+		conn = get_connection()
+		cursor = conn.cursor()
+		cursor.execute("SELECT 1 FROM plants WHERE id = ?", (plant_id,))
+		exists = cursor.fetchone() is not None
+		conn.close()
+		return exists
