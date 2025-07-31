@@ -10,9 +10,9 @@ This repository is for my own use, to track and log the humidity levels of my pl
 
 - Read humidity levels from connected sensors
 - Log data for historical tracking
-- Set personal thresholds for alerts
 - Simple scripts for data collection and monitoring
 - Local network API integration for remote access and automation
+- Local network API for CRUD
 
 ## Setup
 
