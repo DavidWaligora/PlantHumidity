@@ -4,7 +4,7 @@ A personal project to monitor the humidity of my own plants using sensors, with 
 
 ## Purpose
 
-This repository is for my own use, to track and log the humidity levels of my plants. It collects data from humidity sensors and helps me keep my plants healthy by alerting me when watering is needed. The project also includes an API integration for accessing humidity data and controlling sensors over my local network.
+This repository is for my own use, to track and log the humidity levels of my plants. It collects data from humidity sensors and helps me keep my plants healthy by showing me when water is needed. The project also includes an API integration for accessing humidity data and controlling sensors over my local network.
 
 ## Features
 
