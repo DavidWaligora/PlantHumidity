@@ -49,6 +49,14 @@ See the `api/` directory or API documentation for details on available endpoints
 - No guarantee it will work for other setups.
 - Feel free to fork and adapt if you find it useful.
 
+## Technologies Used
+
+- **Python:** Main programming language for scripts and API.
+- **Raspberry Pi Zero 2 W:** Hardware platform for running the project and connecting sensors.
+- **Soil Humidity Sensors:** Hardware for measuring soil moisture.
+- **SQLite:** Database for logging and storing sensor data.
+- **Flask:** Framework for local network API integration.
+
 ## License
 
 MIT License
