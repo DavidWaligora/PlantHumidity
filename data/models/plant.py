@@ -29,7 +29,7 @@ class Plant:
 		cursor.execute("SELECT id, name FROM plants WHERE id = ?", (plant_id,))
 		row = cursor.fetchone()
 		conn.close()
-		if roz:
+		if row:
 			return Plant(id=row[0], name=row[1])
 		return None
 		

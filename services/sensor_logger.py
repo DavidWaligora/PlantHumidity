@@ -11,7 +11,7 @@ SENSOR_3 = 3
 
 # LIST OF SENSORS
 SENSORLIST = [
-#SENSOR_fiji_0
+	SENSOR_fiji_0
 ]
 
 #SPIDEV
@@ -49,13 +49,13 @@ def log_forever():
 		while True:
 			HumidityLog.delete_old_records()
 			for SENSOR in SENSORLIST:
-				if not Plant.exists(SENSOR):
+				if not Plant.exists(SENSOR + 1):
 					print(f"Skipping sensor {SENSOR}: no plant with that ID.")
 					continue
 
 				raw = read_adc(SENSOR)
 				humidity = get_humidity_percent(raw)
-				HumidityLog.log(SENSOR, humidity)
+				HumidityLog.log(SENSOR + 1, humidity)
 				
 			
 			# sleep for one second so all the sensors could provide data
